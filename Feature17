@@ -1,0 +1,26 @@
+
+Feacture: Como padre de familia quiero poder crear una cuenta en la aplicación para acceder a los servivios que esta brinad de manera personalizada
+
+Scenario 1: Creación exitosa
+Given el padre de familia se encuentra en la pantalla inicial
+And el padre de familia da clic en el botón “Registrarse” 
+When el padre de familia llene el campo “Usuario” y “Contraseña”
+ And el padre de familia no esté registrado
+Then el sistema crea una cuenta a su nombre
+And el sistema la agrega a la base de datos
+
+Example
+Nombre de usuario   |   Contraseña      |   Mensaje             |
+Carlitos            |   Contraseña      |   Cuenta registrada   |
+
+Scenario 2: Creación fallida
+Given el padre de familia se encuentra en la pantalla inicial
+And el padre de familia da click en el botón “Registrarse”
+When el padre de familia llene el campo “usuario” y “contraseña”
+ And el nombre de usuario Anda esté registrado
+Then el sistema muestra una ventana con el mensaje “El usuario Anda existe”
+
+Example
+Nombre de usuario   |   Contraseña      |   Mensaje                 |
+Carlitos            |   Contraseña      |   El usuario ya existe   |
+

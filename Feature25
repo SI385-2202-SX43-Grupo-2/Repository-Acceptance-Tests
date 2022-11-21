@@ -1,0 +1,7 @@
+
+Feacture : Como padre de familia, quiero que me notifiquen cuando alguien haya colocado una reseña sobnre la instutución de mi interés para que pueda estar segura y realizar la matricula de mi menor hijo de forma más rápida
+Scenario 1: Padre de familia espera notificación
+Given el padre de familia se encuentra fuera de la aplicación
+And la aplicación tiene registrada la institución de interés del padre de familia
+When la aplicación detecta que otro padre de familia redactó su reseña sobre la institución
+Then la aplicación envía una notificación sobre la nueva reseña

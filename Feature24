@@ -1,0 +1,15 @@
+
+Feacture: Como padre de familia quiero que el sitio web pueda ser usuado por diversos dispositivos como PC, Tablet, Celular, etc .
+
+Scenario 1: Padre de familia utiliza diferentes dispositivos para entrar al sitio web
+Given el padre de familia no está usando su dispositivo móvil
+And el padre de familia entra por la página web de la aplicación
+When el padre de familia ingresa su usuario 
+And contraseña en los campos “Usuario”
+And “Contraseña” respectivamente en el formulario “Inicia Sesión"
+ And el padre de familia haga click en el botón “Iniciar Sesión”.
+Then el sistema muestra la página principal de la app
+
+Examples:
+Usuario         |   Contraseña      |   Mensaje                         |
+Juan Guarnizo   |   Contraseña      | Se inició sesión correctamente    |

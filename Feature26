@@ -1,0 +1,11 @@
+
+Feacture: Como padre de familia quiero recordatorios para actualizar el pago de la membresía ya sea por correo electrónico o una notificación al dispositivo movil 
+Scenario 1: Vencimiento de la membresía
+Given el padre de familia se encuentra fuera de la aplicación
+When la aplicación detecta el acercamiento del vencimiento de la membresía
+Then la aplicación realiza una notificación respecto de la fecha de vencimiento de la membresía
+And la aplicación muestra el monto por pagar
+
+Example
+Mensaje de monto a pagar                                |
+Usted tiene que pagar 35 soles en los restantes 6 días  |

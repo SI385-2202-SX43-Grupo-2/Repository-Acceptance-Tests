@@ -1,0 +1,12 @@
+feature: Como universitario quiero un filtro de búsuqeda por aprobación de reseña de forma que pueda encontrr un docente con tan buena enseñanza como para haber obtenido una alta calificación en las reseñas 
+Scenario 1: El usuario encuentra el filtro por aprobación de reseña
+Given el universitario se encuentra navegando en la aplicación
+And el universitario encuentra el apartado de filtros
+When el universitario seleccione el filtro de búsqueda por aprobación de reseña
+Then el sistema muestra el apartado de filtro de búsqueda por aprobación de reseña.
+
+
+Scenario 2:El usuario filtra reseñas por aprobación de reseña
+Given el sistema muestra el apartado de filtro de búsqueda por aprobación de reseña
+When el universitario seleccione el botón de Buscar.
+Then el sistema filtra todas las reseñas según su aprobación 

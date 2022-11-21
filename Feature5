@@ -1,0 +1,11 @@
+
+Feacture: Como universitario quiero recibir noificaciones acerca de nuevas reseñas que se publicaron del profesor que recientemente busqué información para mantener todas mis fuentes de información actualizadas
+Scenario 1: Notificaciones activadas
+Given el universitario realiza una búsqueda de reseña sobre un profesor
+When el universitario activa las notificaciones de las nuevas reseñas que se publicaron del profesor que consultó recientemente
+Then el sistema envía las notificaciones en tiempo real al dispositivo del universitario
+
+Scenario 2: Notificaciones desactivadas 
+Given el universitario realiza una búsqueda de reseña sobre un profesor
+When el universitario desactiva las notificaciones de las nuevas reseñas que se publicaron del profesor que consultó recientemente.
+Then el sistema no puede enviar las notificaciones en tiempo real al dispositivo del universitario

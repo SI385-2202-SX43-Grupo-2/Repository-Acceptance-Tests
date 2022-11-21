@@ -1,0 +1,20 @@
+Feacture:Como universitario quiero un filtro de búsqueda que incluya parámentros para que la búsqueda de un profesor específico se más fácil para mí
+Scenario:Filtro Implementado
+Given el universitario accede a la barra de búsqueda para buscar información de su profesor
+And el universitario elige los filtros de búsqueda por universidad,sede,curso de interés, grado de recomendación mínima del docente, promedio de puntaje en sus reseñas, nivel de estudio del docente And modalidad de dictado de clases.
+When el universitario presione el botón de “Buscar”
+Then el sistema muestra todos los resultados que coincidan con los parámetros ingresados si coincide con algún profesor
+
+Example:
+nombre_universidad                  | cursos_carrera:       |Grado de recomendación mínima del docente  |Promedio de puntaje en sus reseñas:    |  Nivel de estudio del docente | Modalidad de dictado de clase     |profesores_curso: 
+Universidad de ciencias aplicadas   |Ingeniería de minas    |5 puntos                                   |6 puntos                               |Magistrado                     |Presencial                         |Juan Garnizo
+
+Scenario:Filtro No implementado
+Given el universitario accede a la barra de búsqueda para buscar información de su profesor
+And el universitario elige los filtros de búsqueda por universidad,sede,curso de interés, grado de recomendación mínima del docente, promedio de puntaje en sus reseñas, nivel de estudio del docente And modalidad de dictado de clases.
+When el universitario presione el botón de “Buscar”
+Then el sistema muestra todos los resultados que coincidan con los parámetros ingresados si coincide con algún profesor y le mostrará un mensaje "No se encontró un profesor con esos parámetros"
+
+Example:
+nombre_universidad                  | cursos_carrera:       |Grado de recomendación mínima del docente  |Promedio de puntaje en sus reseñas:    |  Nivel de estudio del docente | Modalidad de dictado de clase     |profesores_curso: 
+Universidad de ciencias aplicadas   |Ingeniería de minas    |5 puntos                                   |6 puntos                               |Magistrado                     |Presencial                         |No se encontró profesor

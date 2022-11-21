@@ -1,0 +1,13 @@
+feature:Como padre de familia, quiero un apartado que funcione como un canal directo de comunicación para que pueda presentar mis quejas en caso de que las presente
+Scenario 1: Usuario presenta sus quejas
+Given el universitario presenta una queja respecto de la app
+And el universitario cuenta con una cuenta premium
+When el universitario abre la aplicación 
+ And el universitario busca el apartado “Reclamos And Quejas”
+And el universitario elige el botón de “reclamar”
+Then el sistema muestra un canal de directo de comunicación
+And el sistema muestra el mensaje “Redacte su reclamo o queja”
+Example:
+
+|   Mensaje             |
+| Redacte su reclamo    |

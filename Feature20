@@ -1,0 +1,24 @@
+
+Feacture: Como padre de familia quiero buscar colegios con filtros geográficos para ver qué colegios están dentro de la zona que deseo
+
+Scenario 1: Padres de familia busca colegios con filtros geográficos
+Given el padre de familia se encuentra en la barra de búsqueda And presiona el botón “filtros geográficos”
+When el padre de familia da click a la opción “filtros geográficos”
+ And el padre de familia ingresa el distrito en el campo “distrito”
+Then la aplicación muestra los colegios que estén en el distrito ingresado
+
+Example:
+Distrito    |   Instituciones Educativas|
+Lima        |       Pamer               |
+
+
+Scenario 2: Padre de familia busca colegios con filtros geográficos con los datos incorrectos
+Given el padre de familia se encuentra en la barra de búsqueda And presiona el boton “filtros geográficos”
+When el padre de familia da click a la opcion “filtros geográficos”
+ And el padre de familia ingresa el distrito en el campo “distrito”
+Then la aplicación no puede mostrar los colegios que estén en el distrito ingresado
+
+Example:
+Distrito    |   Mensaje                                                            |
+Lima        |      Hola <nombre de usuario> no se encontró la Colegio              |
+

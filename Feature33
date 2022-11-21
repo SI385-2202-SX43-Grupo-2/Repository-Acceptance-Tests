@@ -1,0 +1,28 @@
+feature :Como universitario quiero contar con una sección para poder puntuar según mi critorio acerca del dinamismo del método de enseñanza del docente para así poder brindar mi opción sobre el nivel de dinámica que puede llegar a tener y emplear el docente en su metodología de enseñanza
+
+Scenario 1: Universitario visualiza el formulario “Brindar puntaje acerca del dinamismo del M.E del docente”
+Given el universitario se encuentra dentro de la aplicación
+And el usuario visualiza las reseñas hechas por otros usuarios sobre los docentes
+When él universitario haga click en el botón “Puntuar dinamismo del M.E del docente”
+Then la aplicación muestra el formulario “Brindar puntaje acerca del dinamismo del M.E del docente”
+
+Example:
+Mensaje 
+ Brindar puntaje acerca del dinamismo del M.E del docente
+
+Scenario 2: Universitario envía el formulario de brindar puntaje acerca del dinamismo del M.E del docente
+Given la aplicación muestra el formulario “Brindar puntaje acerca del dinamismo del M.E del docente”
+And la aplicación muestra el campo “Puntaje”
+When él universitario selecciona un puntaje del 1 al 10
+ And el universitario haga click en el botón “Enviar puntaje”
+Then la aplicación muestra el mensaje “Se ha calificado correctamente”
+
+
+Example:
+Calificación    |       Mensaje                 |
+    6           |Se ha calificado correctamente |
+Input:
+Calificación: 6
+
+Output: 
+mensaje: Se ha calificado correctamente

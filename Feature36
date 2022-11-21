@@ -1,0 +1,26 @@
+Feature: Como universitario quiero poder crear mi cuenta de forma sencilla y rápida para que pueda ahorrar tiempo al momento de utilizar la aplicación y obtener lo que estoy buscando
+Scenario 1: Universitario ingresa sus datos exitosamente 
+Given el univesitario se encuentra en el formulario “Registrar datos del usuario”
+And el universitario llena los campos “Nombre Completo” “Correo” And “Contraseña”
+When el universitario da click en “Registrar”
+ And el universitario ingresa un correo que no existe
+Then el sistema crea una cuenta para el usuario
+
+Example
+Nombre completo | Correo                |       Mensaje
+Piero Alessandro|   Mendi@hotmail.com   |       Se creó la cuenta exitosamente
+
+Output: 
+Mensaje: Se creó la cuenta existosamente
+
+Scenario 2: Universitario ingresa sus datos sin éxito
+Given el universitario se encuentra en el formulario “Registrar datos del usuario”
+And el universitario llena los campos “Nombre Completo” “Correo” And “Contraseña”
+When el universitario da clic en “Registrar”
+ And el universitario ingresa un correo que Anda existe
+Then el sistema no puede crear una cuenta para el usuario
+And el sistema muestra el mensaje “Ese correo Anda ha sido registrado antes”
+
+Example
+Nombre completo | Correo                |       Mensaje
+Piero Alessandro|   Mendi@hotmail.com   |      se correo ha sido registrado antes 

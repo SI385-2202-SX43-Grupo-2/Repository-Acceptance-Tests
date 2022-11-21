@@ -1,0 +1,16 @@
+
+Feacture: Como administrador quiero tener una estadística de fluctuación de usuarios mensuales para saber si las estrategias de captación de usuarios adopta son existosas o no
+
+Scenario 1: Visualización de estadística
+Given el administrador da click en el apartado “Administradores” a la derecha de la pantalla inicial
+And el administrador escribe sus credenciales en los campos “usuario” And “contraseña”
+And el administrador da click en el botón “ingresar”
+When el administrador da click en el botón “ver estadísticas”
+ Then el sistema muestra una estadística del número de visitas de usuarios por cada mes.
+
+Scenario 2: Visualización de estadística con datos erróneos 
+Given el administrador da click en el apartado “Administradores” a la derecha de la pantalla inicial
+And el administrador escribe sus credenciales en los campos “usuario” And “contraseña”
+And el administrador da click en el botón “ingresar”
+When el administrador da click en el botón “ver estadísticas”
+Then el sistema no puede mostrar la estadística del número de visitas de usuarios por cada mes.

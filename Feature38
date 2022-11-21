@@ -1,0 +1,22 @@
+Feature: Como universitario quiero un filtro de búsqueda por curso de manera que no pueda confundirse al momento de elegir a los docentes ya que enseñan cursos diferentes
+Scenario 1: Usuario ingresa el curso correctamente.
+Given el sistema muestra el filtro de búsqueda por curso
+And el universitario rellena el campo “Nombre del Curso”
+When el universitario da clic en “Buscar”
+ And el sistema encuentra el curso.
+Then el sistema muestra una lista con los docentes que enseñan el curso
+
+Example:
+Curso       |   Profesores
+Gestión     |   Macos Alcachofa
+
+Scenario 2: Usuario ingresa el curso incorrectamente
+Given el sistema muestra el filtro de búsqueda por curso
+And el universitario rellena el campo “Nombre del Curso”
+When el usuario da click en “Buscar”
+ And el sistema no encuentra el curso
+Then el sistema muestra el mensaje “Ingrese el nombre del curso correctamente”
+
+Example:
+Curso       |   Profesores
+Gestión     |   ingrese curso correctamente

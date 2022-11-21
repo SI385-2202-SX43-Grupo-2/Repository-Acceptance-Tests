@@ -1,0 +1,13 @@
+
+Feacture: Como administrativo, deseo contar con una inteligencia artificial que identifique las reseñas sospechosas de ser falsas, y me avise de su existencia para que pueda moderarlas
+
+Scenario 1: Identificación de reviews sospechosas 
+Given los usuarios dejan reseñas sobre un determinado docente o institución educativa
+When el administrador recibe una notificación de la inteligencia artificial sobre una detección de irregularidades en alguna de las reseñas.
+Then el sistema marca automáticamente la review como ‘sospechosa’
+
+Example
+|Mensaje                 |
+|Reseña sospechosa”:     |
+
+

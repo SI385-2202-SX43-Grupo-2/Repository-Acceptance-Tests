@@ -1,0 +1,25 @@
+
+Feacture: Como padre de familia quiero poder leer las reviews de las instituciones educativas de mi interés para poder obtener información sobre ellas antes de matricular
+
+Scenario 1: Acceso Exitoso
+Given el padre de familia se encuentra en la pantalla de búsqueda de Instituciones Educativas 
+And el padre de familia inserta el nombre de la IE que desea buscar en el campo de búsqueda 
+And el padre de familia selecciona opcionalmente filtros de búsqueda adicionales
+When el padre de familia rellene los campos mostrados y  dé click en el botón buscar 
+And el sistema encuentre instituciones educativas que coincidan con los parametros de busqueda solicitados
+Then el sistema mostrará las instituciones que halla encontrado 
+And el sistema mostrará tres reviews por cada institución educativa que muestre
+
+Example:
+Distrito    |   Rango de pago virtual    | Grado de recomendación   |   Promedio de puntaje     | Cursos adicionales    |     Metodología    |Actividades extracurriculares   |  |  Instituciones Educativas|
+Lima        |           500              |          5 estrellas     |           5 estrellas     |      Geografía        |   Didáctica        |           Banda sonora            |              Pamer       |                                                                
+
+
+
+Scenario 2: Acceso sin éxito
+Given el padre de familia se encuentra en la pantalla de búsqueda de Instituciones Educativas And el padre de familia inserta el nombre de la IE que desea buscar en el campo de búsqueda And el padre de familia selecciona opcionalmente filtros de búsqueda adicionales 
+When el padre de familia da click en el botón buscar And el sistema no encuentra instituciones educativas que coincidan con los parametros de busqueda solicitados
+Then el sistema mostrará el mensaje “No se encontraron instituciones educativas que cumplan con los criterios solicitados”
+Example:
+Distrito    |   Rango de pago virtual    | Grado de recomendación   |   Promedio de puntaje     | Cursos adicionales    |     Metodología    |Actividades extracurriculares   |  |  Instituciones Educativas                         |
+Lima        |           500              |          5 estrellas     |           5 estrellas     |      Geografía        |   Didáctica        |           Banda sonora            |   No se encontró colegio con esos parámetros      |                                                                

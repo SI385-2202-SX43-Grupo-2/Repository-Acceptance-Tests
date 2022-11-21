@@ -1,0 +1,18 @@
+Feature: Como universitario quiero poder visualizar las reseñas que realizan otros usuarios a los docentes para así poder ver su opinión y experiencia que tuvieron respecto al profesor
+Scenario 1: Usuario visualiza las reseñas 
+Given el universitario se encuentra dentro de la aplicación
+When el universitario busca algún docente
+ And la aplicación encuentra al docente
+Then la aplicación muestra todas las reseñas hechas por otros usuarios sobre el docente buscado
+Example
+Docente         |   Reseña                          |       
+    Juanito     |   El profesor es malo enseñando   |
+
+Scenario 2: Universitario no visualiza las reseñas 
+Given el universitario se encuentra dentro de la aplicación
+When el universitario busca algún docente 
+ And la aplicación no encuentra el docente
+Then la aplicación muestra un mensaje “No se ha podido encontrar al docente ingresado”
+Example
+Docente         |   Reseña                                          |       
+    Juanito     |   No se ha podido encontrar al docente ingresado  |

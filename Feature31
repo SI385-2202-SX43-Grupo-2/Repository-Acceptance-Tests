@@ -1,0 +1,24 @@
+feature: Como universitario quiero una sección para poder puntuar las reseñas que realizan otros usuarios para así validar y verificar y verificar la verdadera la veracidad de ellas, y que otros usuarios pueden verlas como confiables
+Scenario 1: Universitario visualiza el formulario “Brindar calificación a la reseña”
+Given el universitario se encuentra dentro de la aplicación
+And el universitario visualiza las reseñas hechas por otros usuarios acerca de los docentes
+When el universitario haga click en el botón “Puntuar reseña”
+ And el universitario ubica la reseña hecha por otro usuario
+Then la aplicacion muestra el formulario “Brindar calificación a la reseña”
+And la aplicación muestra el campo “Puntaje”
+
+Example 
+Puntuar reseña      |           Mensaje             |
+        4           |  Se registró correctamente    |
+
+Scenario 2: Universitario envía el formulario de brindar calificación a la reseña junto con el campo requerido
+Given la aplicación muestra el formulario “Brindar calificación a la reseña”
+And la aplicación muestra el campo “Puntaje”
+When el universitario selecciona la cantidad de estrellas del 1 al 5
+ And el universitario haga click en el botón “Enviar puntaje”
+Then la aplicación muestra el mensaje “No se ah podido enviar el puntaje, ingrese un puntaje válido”
+And la aplicación cierra el formulario “Brindar calificación a la reseña”
+
+Example 
+Puntuar reseña      |           Mensaje                    |   
+        4           |  No se pudo registrar correctamente  |

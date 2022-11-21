@@ -1,0 +1,24 @@
+
+Feacture:
+Como padre de familia quiero un filtro por nivel de exigencia y pensiones para poder buscar el colegio que se ajuste a mis requisitos
+
+Scenario 1: Padre de familia busca colegios según el nivel de exigencia que desea 
+Given el padre de familia está en la barra de búsqueda And da click en el botón “búsqueda avanzada” 
+When el padre de familia de click en la opción de “nivel de exigencia”
+ And el padre de familia elija una de las opciones “1”,“2”,“3” 
+Then la aplicación muestra los colegios con categoria de ese nivel
+
+Example
+Nivel de exigencia      |       colegios    |
+Nivel 3                 |       Pamer       |
+
+
+Scenario 2: Padre de familia busca colegios según sus posibilidades económicas
+Given el padre de familia está en la barra de búsqueda And da click en el botón “búsqueda avanzada” 
+When el padre de familia da click en el botón “pensiones”
+ And el padre de familia ingresa información en el campo “cantidad”
+Then la aplicación muestra los colegios que estén dentro del intervalo 
+And no encuentra les mostrará un mensaje diciendo “ No se encontró colegio con esa exigencia”
+Example
+Pensaciones             |       colegios    |
+500                     |       Pamer       |

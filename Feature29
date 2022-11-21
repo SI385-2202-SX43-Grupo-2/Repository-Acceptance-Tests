@@ -1,0 +1,10 @@
+Feature: Como universitario quiero tener un filtro de búsqueda por rigurosidad de calificación que cuentan los docentes para así buscar de manera más rápida y eficiente lo que me interesa, y ahorrar tiempo en ello.
+Scenario 1: Universitario utiliza el filtro de búsqueda por rigurosidad de calificación.
+Given el universitario se encuentra dentro de la aplicación
+When el universitario haga click en el apartado de Filtros de búsqueda
+ And el universitario seleccionado la opción de “Búsqueda por rigurosidad de calificación”
+Then la aplicación muestra cada reseña hecha a los profesores con el
+
+Example
+Rigurosidad de calificación |       Reseña                      |
+            5 puntos        |       El profesor es muy bueno    |

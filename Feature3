@@ -1,0 +1,15 @@
+
+Feacture: Como universitario quiero recibir ofertas sobre planes prmium en mi correo o por notificaciones para que no me pierda ninguna oferta que brindre la empresa Motomasters
+Scenario 1: Notificaciones activadas
+
+Given el universitario activa las notificaciones
+When el sistema detecta alguna oferta en la plataforma
+ And el sistema envía el correo toda la información de la oferta
+Then: El sistema envía al usuario las notificaciones en tiempo real a su dispositivo
+And el sistema envía el correo toda la información de la oferta.
+
+Scenario 2: Notificaciones desactivadas 
+Given el universitario no tiene las notificaciones de oferta activadas
+When el sistema detecta alguna oferta en la plataforma
+Then el sistema no puede enviar al usuario las notificaciones en tiempo real de su dispositivo
+

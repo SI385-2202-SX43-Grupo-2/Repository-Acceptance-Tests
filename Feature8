@@ -1,0 +1,10 @@
+
+Feacture: Como administrativo deseo que los usuarios puedan acceder a la plataforma desde cualquier sistema operativo , para que la plataforma Mafu sea más accesible
+Scenario 1: Plataforma funcional como página web
+Given la plataforma posee una versión como página web
+When el administrador permite el acceso de los usuarios por Windows, Mac o Linux.
+Then la plataforma, independientemente de su sistema operativo, funciona con normalidad.
+Scenario 2: Plataforma funcional como aplicaciones móviles
+Given la plataforma también existe como aplicaciones móvil
+When el administrador permite el acceso de los usuarios desde un dispositivo móvil android
+ Then la plataforma opera correcta And completamente

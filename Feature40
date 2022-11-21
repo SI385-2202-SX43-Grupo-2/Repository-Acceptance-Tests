@@ -1,0 +1,23 @@
+Feature :Como universitario quiero un filtro de búsqueda por apellido de profesor de forma que pueda encontrar con facilidad el docente que me recomendaron y verificar si cuenta con reseñas positivas
+Scenario 1: Usuario ingresa el apellido del profesor correctamente
+Given el sistema muestra el filtro de búsqueda por apellido de profesor 
+And el universitario rellena el campo Nombre del Profesor correctamente
+When el usuario da click en “Buscar”
+ And el sistema encuentra el profesor 
+Then el sistema muestra el nombre completo del profesor
+Example
+Apellido        |   Profesor    
+Mendieta        |   Piero Mendieta
+
+
+Scenario 2: Universitario ingresa el apellido del profesor incorrectamente
+Given el sistema muestra el filtro de búsqueda por apellido de profesor
+And el universitario rellena el campo Nombre del Profesor con un dato no existente
+When el usuario da click en “Buscar”
+ And el sistema no encuentra el profesor
+Then el sistema muestra el mensaje “Docente no encontrado”
+
+
+Example
+Apellido        |   Profesor    
+Mendieta        |   Docente no encontrado

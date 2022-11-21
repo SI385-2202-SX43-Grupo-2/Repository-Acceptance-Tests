@@ -1,0 +1,22 @@
+
+Feacture: Como administrativo, quiero ser capaz de gestionar las reseñas y recomendaciones que los usuarios se hacen entre sí, para poder evitar engaños, y evitar que los usuarios que tengan malas intenciones de recomendaciones falsas a otros usuarios
+Scenario 1: Suspensión de una reseña sospechosa
+Given un usuario realiza una reseña
+And el sistema marca la reseña como no verídica
+When el administrador encuentra la reseña
+ And el administrador empieza un chat con el usuario
+And el administrador no obtenga respuesta del redactor de la reseña en menos de 48h
+Then el administrador convierte la reseña pública en una privada de modo que solo los administradores 
+And  el usuario redactor la pueden ver.
+Examples:
+Estado de reseña:   |Mensaje                        |
+privada             |Se registró el estado de reseña| 
+
+Scenario 2: Eliminación de una reseña sospechosa
+Given la aplicación detectó que ha pasado una semana sin respuesta del redactor desde que el administrador inicio un chat
+When el administrador ha marcado la opción “ocultar” en una reseña
+Then el sistema no permite que el usuario escriba reseñas durante el periodo de un mes
+
+Examples:
+Estado de reseña:   |Mensaje                        |
+Ocultar             |Se registró el estado de reseña| 

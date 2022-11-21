@@ -1,0 +1,15 @@
+
+
+Feacture: Como administrador quiero poder modificar los anuncios que ven los usuarios según sus afinidades para que puedan obtener información de productos de su interés de los sponsors de la app
+Scenario 1: Modificación exitosa 
+Given el sistema utiliza la información de las cookies DSID de tipo marketing And seguimiento 
+When el administrador acceda al apartado “administrador”
+ And el administrador enlaza el algoritmo con los anuncios de las empresas sponsors
+Then el sistema configura los anuncios de nada usuario según sus preferencias 
+
+Scenario 2: Modificación sin éxito
+Given el sistema utiliza la información de las cookies DSID de tipo Marketing And seguimiento
+When el administrador accede al apartado “Administrador”.
+ And el administrador no enlaza el algoritmo con los anuncios de las empresas sponsors
+Then el sistema no puede configurar los anuncios de cada usuario según sus preferencias.
+

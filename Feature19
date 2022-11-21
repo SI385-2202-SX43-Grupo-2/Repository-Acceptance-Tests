@@ -1,0 +1,29 @@
+
+Feacture: Como administrador quiero ofrecer un diseño de aplicación intuitivo y amigable de uso para que el usuario pueda acceder de manera sencila a todos los servicios de la app
+
+Scenario 1: Configuración de diseño 
+Given administrador da click en el apartado “administradores” a la derecha de la pantalla inicial
+And el administrador escribe sus credenciales en los campos “usuario” And “contraseña”
+And el administrador da click en el botón “ingresar”
+When el administrador da click en el botón “configuración de diseño”
+ Then el sistema muestra las opciones de cambio de diseño para la pantalla principal.
+
+Example
+Usuario         |   Contraseña          |   Opciones de cambio de diseño    |
+Alcachofa       |   Contraseña          |           Rojito                  |
+
+Scenario 2: Configuración de diseño con datos erróneos 
+Given el administrador da click en el apartado “ administradores” a la derecha de la pantalla inicial
+And el administrador escribe sus credenciales en los campos “usuario” And “contraseña”
+And el administrador da click en el botón “ingresar”
+When el administrador da click en el botón “configuración de diseño
+Then el sistema muestra un mensaje
+Input:
+Usuario:Carlitos Alcachofa
+Contraseña:Contraseña
+Output: 
+Mensaje: No se muestra
+
+Example
+Usuario         |   Contraseña          |          Mensaje                  |
+Alcachofa       |   Contraseña          |         No se muestra             |

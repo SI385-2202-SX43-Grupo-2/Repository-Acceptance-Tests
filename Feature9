@@ -1,0 +1,7 @@
+
+Feacture: Como administrativo, deseo que la página sea capaz de soportar a más de 10000 usuarios conectados al mismo tiempo
+Scenario 1: 100.000 usuarios conectados a la vez
+Given la plataforma brinda un servicio de hasta 100.000 usuarios a la vez
+When la plataforma exista menos de 100.000 usuarios conectados simultáneamente
+Then la plataforma funciona con normalidad And correctamente
+

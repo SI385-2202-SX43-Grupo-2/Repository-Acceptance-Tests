@@ -1,0 +1,11 @@
+
+Feacture: Como universitario quiero recibir notificaciones sobre las respuestas que un rseñador me dio para no tener la necesidad de entrar a cada momento para verificar si mi consulta fue resuelta
+Scenario 1: Notificaciones activadas
+Given el universitario realiza una pregunta a un reseñador
+When el universitario activa las notificaciones de las respuestas sus consultas por el canal de comunicación con el reseñador
+Then el sistema envía las notificaciones en tiempo real al dispositivo del universitario
+
+Scenario 2: Notificaciones desactivadas
+Given el universitario no tiene que realizar ninguna pregunta a un reseñador
+When el universitario desactiva las notificaciones de las respuestas a sus consultas por el canal de comunicación con el reseñador
+Then el sistema no puede enviar las notificaciones en tiempo real al dispositivo del universitario

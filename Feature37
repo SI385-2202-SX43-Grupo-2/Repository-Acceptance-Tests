@@ -1,0 +1,28 @@
+Feature : Como universitario quiero poder registrar la universidad en la que estudio de forma sencilla para que pueda ahorrar tiempo al momento de buscar en profesor con el cual matricularme
+Scenario 1: Universitario registró la universidad exitosamente 
+Given el sistema  muestra el formulario “Registrar universidad del usuario”
+And el universitario da click en “Universidad”
+And el universitario rellena el campo “Nombre de la Universidad”
+When el universitario da clic en “Buscar”
+ And el sistema encuentra la universidad
+Then el sistema muestra las carreras de la universidad encontradas
+And el sistema muestra los cursos de cada carrera
+And el sistema muestra los profesores de cada curso.
+
+Example:
+Nombre de la universidad  | Carreras  
+ Universidad de Puno      | Panadería nuclear
+
+
+Scenario 2: Universitario registró la universidad sin éxito
+Given el sistema muestra el formulario “Registrar universidad del usuario”
+And el universitario da clic en “Universidad”
+And el universitario rellena el campo “Nombre de la Universidad”
+When el universitario da clic en “Buscar”
+ And el sistema no encuentra la universidad
+Then el sistema muestra el mensaje “No se encontró la universidad”
+
+Example:
+Nombre de la universidad  | Mensaje
+ Universidad de Puno      | Hola <nombre de usuario> no se encontró la universidad
+corregido

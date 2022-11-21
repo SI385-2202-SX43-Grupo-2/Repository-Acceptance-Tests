@@ -1,0 +1,24 @@
+
+Feacture: Como adiministrativo quiero ser capaz de comunicarme con otros usuarios para poder hacerles consultas sobre las resaeñas que dejaron en la página web mediante el chat directo
+
+Scenario 1: Inicio de chat directo con usuarios sospechosos
+Given un usuario realiza una reseña
+And el sistema marca la reseña como no verídica
+When el administrador encuentra la reseña marcada por el sistema
+Then el administrador redacta un mensaje directo al usuario
+And el sistema envía la notificación por correo electrónico
+
+Example:
+Mensaje del administrador                       |Mensaje:   
+Hola<Usuario> quería preguntarte sobre tu reseña|Se envió la notificación por correo
+
+Scenario 2: Inicio de chat directo con usuarios sospechosos sin éxito
+Given un usuario realiza una reseña
+And el sistema marca la reseña como no verídica
+When el administrador no encuentra la reseña marcada por el sistema 
+ Then el administrador redacta un mensaje directo al usuario
+And el sistema no puede enviar la notificación por correo electrónico
+
+Example:
+Mensaje del administrador                       |Mensaje:   
+Hola<Usuario> quería preguntarte sobre tu reseña|No se envió la notificación por correo

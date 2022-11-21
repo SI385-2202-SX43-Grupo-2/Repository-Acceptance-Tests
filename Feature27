@@ -1,0 +1,41 @@
+
+Feacture: Como padre de famlia quiero poder reseñar los colegios en los que ha estudiado mi hijo para poder ayudar a otros padres a encfontrar un colegio que imparta clases con la metodología didáctica que ellos deseen
+
+Scenario 1: Padre de familia visualiza el formulario “Escribir reseña”
+Given el padre de familia se encuentra dentro de la aplicación
+And el usuario se encuentra visualizando reseñas hechas por otros usuarios acerca de colegios 
+When el padre de familia haga click en el botón “Añadir reseña”
+ Then la aplicación muestra el formulario “Escribir reseña” en la parte inferior junto con los campos requeridos “Nombre de la institución" “Nombre del usuario”, “Email” And “Comentario”
+
+
+Example
+Nombre de la institución|       Nombre del usuario :    |   Email                       |   Comentario                  | Mensaje
+Pamer                   |           Juanito Alcachofa   |JuanitoAlcachofa@hotmail.com   |   |Es una gran institución    | Se envió la reseña 
+
+Scenario 2: Padre de familia envía el formulario de escribir reseña junto con los datos válidos
+Given la aplicación muestra el formulario “Escribir reseña”
+And la aplicación muestra los campos “Nombre de la Institución", “Nombre del usuario”, “Email” And “Comentario”
+When el padre de familia ingresa el nombre de la institución
+ And el padre de familia ingresa su nombre completo
+And el padre de familia ingresa su dirección de correo electrónico
+When el padre de familia haga click en el botón “Publicar reseña”
+Then la aplicación muestra el mensaje “Se ha publicado la reseña correctamente”
+And la aplicación limpia los campos requeridos del formulario “Escribir reseña”
+Example
+Nombre de la instutición    | Nombre del usuario    |Email                           |Comentario                     |  Mensaje             |
+Pamer                       |   Juanito Alcachofa   |  JuanitoAlcachofa@hotmail.com  |   Es unca gtran institución   |  Se envió el mensaje |
+
+
+Scenario 2: Padre de familia envía el formulario de escribir reseña junto con los datos válidos
+Given la aplicación muestra el formulario “Escribir reseña”
+And la aplicación muestra los campos “Nombre de la Institución", “Nombre del usuario”, “Email” And “Comentario”
+When el padre de familia ingresa el nombre de la institución
+ And el padre de familia ingresa su nombre incorrectamente
+And el padre de familia ingresa su dirección de correo electrónico incorrectamente
+When el padre de familia haga click en el botón “Publicar reseña”
+Then la aplicación muestra el mensaje “No se ha podido publicar la reseña correctamente, ingrese datos validos”
+Example
+Nombre de la instutición    | Nombre del usuario    |Email                           |Comentario                     |  Mensaje                                       |
+Pamer                       |   Juanito Alcachofa   |  JuanitoAlcachofa@hotmail.com  |   Es unca gtran institución   |  No se ah podido enviar la reseña correctamente|
+
+

@@ -1,0 +1,18 @@
+Feature:Como universitario quiero visualizar la puntuación otorgada a los docentes para así ver de manera resumida, gráfica y genereal la puntuación que obtuvo de acuerdo al criterio de los usuarios
+Scenario 1: Usuario visualiza los puntajes 
+Given el universitario se encuentra dentro de la aplicación
+When el universitario busca algún docente
+ And el universitario da click en el botón “Buscar”
+Then la aplicación muestra un apartado gráfico general sobre la calificacion otorgada al docente
+example:
+Docente   |  Calificación |
+Carlitos  |     3.6       |
+
+Scenario 2: Usuario no visualiza los puntajes 
+Given el universitario se encuentra dentro de la aplicación
+When el universitario busca algún docente
+ And el universitario da click en el botón “Buscar”
+Then la aplicación muestra un mensaje “Ha ocurrido un error, vuelva a recargar la pagina”
+
+Docente   |  Calificación            |
+Carlitos  |     Vuelva a cargar      |

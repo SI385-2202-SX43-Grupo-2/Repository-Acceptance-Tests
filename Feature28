@@ -1,0 +1,39 @@
+Feature: Como universitario quiero poder reseñar acerca de los métodos de enseñanzza de los docentes para así poder compartir y brindar mi opinión y experiencia propia a los demás usuarios sobre la metodología de enseñanza que emplea el docente en clases
+
+Scenario 1: Universitario visualiza el formulario “Escribir reseña”
+Given el universitario se encuentra dentro de la aplicación
+And el universitario visualiza las reseñas hechas por otros usuarios acerca de docentes universitarios
+When el universitario haga clic en el botón “Añadir reseña”
+Then la aplicación muestra los campos “Nombre del docente”, “Nombre del usuario”, “Email” And “Comentario”
+Example
+Nombre de la institución|NOmbre de la universidad del universitario |Email                       |Comentario                 |          Mensaje                 |
+Pamer                   |           Upc                             |JuanitoAlcachofa@hotmail.com|Es una gran institución    |          Se envió la reseña      |
+
+
+Scenario 2: Universitario envía el formulario de escribir reseña junto con los datos válidos
+Given la aplicación muestra el formulario “Escribir reseña”
+And la aplicación muestra los campos “Nombre del docente”, “Nombre del usuario”, “ Email” And “Comentario”.
+When el universitario ingresa el nombre del docente a reseñar.
+ And el universitario ingresa su nombre 
+And el universitario ingresa su dirección de correo electrónico
+And el universitario ingresa su reseña en el campo “Comentario”
+And el universitario hace click en el botón “Publicar reseña”
+Then la aplicación muestra el mensaje “Se ha publicado la reseña correctamente” 
+And la aplicación limpia los campos requeridos del formulario “Escribir reseña”
+Example
+Nombre de la institución|NOmbre de la universidad del universitario |Email                       |Comentario                 |          Mensaje                 |
+Pamer                   |           Upc                             |JuanitoAlcachofa@hotmail.com|Es una gran institución    |          Se envió la reseña      |
+
+Scenario 3: Universitario envía el formulario de escribir reseña junto con datos inválidos 
+Given la aplicación muestra el formulario “Escribir reseña”
+And la aplicación muestra los campos “Nombre del docente”, “Nombre del usuario”, “ Email” And “Comentario”.
+When el universitario ingresa el nombre del docente a reseñar.
+ And el universitario ingresa su nombre incorrectamente
+And el universitario ingresa su dirección de correo electrónico incorrectamente
+And el universitario ingresa su reseña en el campo “Comentario”
+And el universitario hace click en el botón “Publicar reseña”
+Then la aplicación muestra el mensaje “No se ha podido publicar la reseña correctamente, ingrese datos válidos” 
+Example
+Nombre de la institución|NOmbre de la universidad del universitario |Email                       |Comentario                 |          Mensaje                                                             |
+Pamer                   |           Upc                             |JuanitoAlcachofa@hotmail.com|Es una gran institución    |  No se ha podido publicar la reseña correctamente, ingrese datos válidos     |
+

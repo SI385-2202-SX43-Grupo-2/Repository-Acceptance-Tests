@@ -1,0 +1,28 @@
+
+Feacture :
+Como padre de familia quiero tener una comunicación directa con otros usuarios para poder tener información más detallada sobre el colegio que estoy interesada
+
+
+Scenario 1: Padre de familia logra contacto directo con otros usuarios
+Given el padre de familia accede al “apartado de mensajería”
+When el padre de familia da click al usuario con el que quería conversar 
+And el padre de familia rellene el cuadro de texto con el mensaje
+ And el padre de familia haga click  en el botón “enviar mensaje”
+Then el mensaje enviado por el padre de familia entrará en el apartado de “nuevos mensajes” del reseñador.
+And el sistema mostrará un “mensaje de envío exitoso”
+
+Example:
+Mensaje                                                             | Mensaje
+Hola, ¿qué tal?, Quisiera preguntarte algunas cosas como usuarios   | Mensaje de envío existoso
+
+
+Scenario 2: Padre de familia no logra el contacto directo con otros usuarios
+Given el padre de familia accede al “apartado de mensajería”
+When el padre de familia da click al usuario con el que quería conversar 
+And el padre de familia rellene el cuadro de texto con el mensaje
+ And el padre de familia haga click  en el botón “enviar mensaje”
+Then el mensaje no se enviará
+ And no entrará en el apartado de nuevos mensajes del reseñador.
+Example:
+Mensaje                                                             | Mensaje
+Hola, ¿qué tal?, Quisiera preguntarte algunas cosas como usuarios   | No se envió el mensaje

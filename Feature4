@@ -1,0 +1,18 @@
+Feacture:Como universitario quiero puntuar a los usuarios que tengan más comentarios con aceptación y verificación de la información para fomentar la veracidad y objetividad de las reseñas dentro de la app
+
+Scenario 1: Puntuar una reseña 
+Given el universitario quiere puntuar una reseña porque le fue de utilidad
+When él universitario acceda a la sección de puntuar reseñas pertenecientes a la reseña
+Then el universitario califica positiva o negativamente acerca de la veracidad de la reseña  
+
+Example
+Puntuación del usuario: |Mensaje:
+”5 estrellas”           |Se envió la calificación
+Scenario 2: No Puntuó una reseña 
+Given el universitario quiere puntuar una reseña porque le fue de utilidad
+When él universitario acceda a la sección de puntuar reseñas pertenecientes a la reseña
+And el usuario presionar otra parte de la pantalla y no puntúa la reseña
+Then No se registra la calificación y se le mostrará un mensaje diciendo “ No se registró calificación  
+Examples:
+Puntuación del usuario  | Mensaje
+5 estrellas”            |No se registró calificación

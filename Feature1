@@ -1,0 +1,22 @@
+Feacture: Como universitario, quiero tener una comunicación directa con el autor de una reseña para solucionar algunas dudas que se presenten acerca del profesor
+
+Scenario 1: Canal establecido
+Given el universitario accede al perfil mafu del reseñador
+When él universitario da clic en el botón ‘iniciar chat privado”
+And el universitario redacta un mensaje
+And el universitario da clic en el botón ‘Enviar mensaje’
+Then el sistema envía el mensaje al reseñador.
+Example:
+|Mensaje del usuario                                       |Mensaje de la app
+Hola qué tal, soy piero, quiero saber algo del profesor    |Se envió el mensaje
+
+Scenario 2: Canal establecido sin éxito
+Dado que el universitario accede al perfil de Mafu del reseñador
+Cuando el universitario da clic en el botón “iniciar chat privado”
+ Y el universitario redacta un mensaje
+ Y el universitario da clic en el botón ‘Enviar mensaje’
+ Y el sistema detecta un posible bloqueo al perfil del reseñador
+Entonces el sistema no puede enviar el mensaje al reseñador.
+Example:
+Mensaje del usuario                                        |Mensaje de la app:
+Hola qué tal, soy piero, quiero saber algo del profesor   |No se mandó el mensaje

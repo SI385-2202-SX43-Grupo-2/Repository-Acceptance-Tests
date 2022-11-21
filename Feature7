@@ -1,0 +1,15 @@
+
+Feacture: Como administrativo, deseo que la plataforma haga respaldos de la base de datos de la plataforma, de forma automática y periódica, para garantizar que, en caso de un ataque informático, la información pueda ser recuperada
+Scenario 1: Respaldo y Restauración exitoso
+Given el sistema detecta que los datos de la plataforma son propensos a corromperse o dañarse 
+And el sistema envía una alerta al administrador
+When el administrador recibe la alerta del sistema
+ And el administrador realiza una copia de la base de datos
+Then el sistema guarda la copia de seguridad de forma periódica And automática
+
+Scenario 2: Respaldo And Restauración sin éxito
+Given el sistema no detecta que los datos de la plataforma son propensos a corromperse o dañarse
+And el sistema no puede enviar una alerta al administrador 
+When el universitario no recibe la alerta del sistema
+ And el administrador no realiza una copia de la base de datos
+Then el sistema no puede guardar la copia de seguridad de forma periódica And automática

@@ -1,0 +1,11 @@
+Feacture Como administrativo, deseo ser capaz de acceder a un registro de inicio de sesión de los usuarios, y poder bloquear sus cuentas si detectara actividad sospechosa 
+
+Scenario 1: Lectura del registro
+Given el usuario ingresa sesión desde cualquier dispositivo
+When el administrador ve el registro de actividades de la cuenta del usuario
+Then el administrador visualiza los dispositivos desde los cuales el usuario ha ingresado sesión
+
+Scenario 2: Lectura del registro sin éxito
+Given el usuario ingresa sesión desde cualquier dispositivo
+When el administrador no ve el registro de actividad de la cuenta del usuario
+Then el administrador no puede visualizar los dispositivos desde los cuales el usuario ha ingresado sesión

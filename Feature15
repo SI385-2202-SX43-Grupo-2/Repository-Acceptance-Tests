@@ -1,0 +1,8 @@
+Feacture: Como padre de familia/ universitario quiero funciones de búsqueda rápida y búsqueda avanzada para poder encontrar la información solicitada de manera más precisa y veloz
+
+Scenario 1: Búsqueda por partes
+Given el padre de familia se encuentra en la pantalla inicial
+And el padre de familia escribe parte del nombre de la institución educativa de su interés
+When el padre de familia haga clic en el botón “búsqueda avanzada And rápida”
+Then el sistema le muestra todos los resultados de nombres de colegios que contienen el texto ingresado.
+

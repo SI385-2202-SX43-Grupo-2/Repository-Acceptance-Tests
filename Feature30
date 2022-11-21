@@ -1,0 +1,20 @@
+Feature:Como universitario quiero contar con una sección para poder puntuar según mi criterio la rigurosidad de calificación que presentan los docentes para así poder proporcionar a los demás usuarios mi punto de vista y experencia sobre el nivel de rigurosidad que emplea el docenete en cuanto a calificación
+Scenario 1: Universitario visualiza el formulario Brindar puntaje de calificación por rigurosidad
+Given el universitario se encuentra en la aplicación
+And el usuario visualiza las reseñas hechas por otros usuario acerca de los docentes
+When el universitario haga click en el botón “Puntuar rigurosidad de calificación, del profesor”
+Then la aplicación muestra el formulario ‘Brindar puntaje de calificación por rigurosidad”
+And la aplicación muestra el campo “Puntaje”
+Example
+Criterio de rigurosidad |   Mensaje                              |
+            3           |      Se resgistró correctamente        |
+
+Scenario 2: Universitario envia el formulario de brindar puntaje de calificacion por rigurosidad junto con el dato válido
+Given la aplicación muestra el formulario “Brindar puntaje de calificación por rigurosidad”
+And la aplicación muestra el campo “Puntaje”
+When el usuario selecciona un puntaje fuera del rango 1 al 10
+
+Example
+Criterio de rigurosidad |   Mensaje                              |
+            4           |      Se resgistró correctamente        |
+

@@ -1,0 +1,20 @@
+
+Feacture: Como padre de familia quiero un filtro para poder buscar más rápido y saber que colegios son estatales y privados 
+
+Scenario 1: Padre de familia busca colegios estatales 
+Given el padre de familia se encuentra en la barra de búsqueda And presiona el botón “extender opciones”
+When el padre de familia presione la opcion “Colegio estatales”
+Then la aplicación solo muestra colegios de esa categoría
+
+Examples : 
+Tipo de colegios    | Colegios      |
+    Privados        |   Pamer       |
+
+
+Scenario 2: Padre de familia busca colegios privados 
+Given el padre de familia se encuentra en la barra de búsqueda And presiona el botón “extender opciones”
+When el padre de familia presione la opcion “Colegio estatales”
+Then la aplicación sólo muestra colegios de esa categoría
+Examples : 
+Tipo de colegios    | Colegios      |
+    estatales       |   2087        |
